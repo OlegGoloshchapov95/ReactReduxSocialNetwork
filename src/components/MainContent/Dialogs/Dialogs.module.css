@@ -1,0 +1,32 @@
+.dialogs{
+	overflow:hidden;
+}
+.dialogs .dialogsItems{
+	width:30%;
+	float:left; 
+	padding:10px;
+	border:3px solid #90900b;
+}
+.dialogs .messages{
+	width:70%;
+	float:left; 
+	border:3px solid #90900b;
+}
+.dialogsItems .dialog{
+    border-bottom:1px solid #ccc; 
+    padding:10px 0;
+     font-weight:bold;
+}
+.messages .message{
+    padding:5px;
+    border-bottom:1px solid #90900b;
+    background-color:#ccc; 
+}
+@media (max-width: 767.98px){
+	.dialogs .dialogsItems{
+		width:40%;
+	}
+	.dialogs .messages{
+		width:60%;
+	}
+}
