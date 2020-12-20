@@ -3,7 +3,6 @@ import classes from "./Dialogs.module.css";
 import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
 import {NavLink} from 'react-router-dom';
-import {updateNewMessageBodyCreator,sendMessageCreator} from './../../../redux/dialogs-reducer'
 const Dialogs = (props) => {
   let dialogsElements = props.dialogsPage.dialogsData.map(dialog => <DialogItem name={dialog.name} id={dialog.id}/>);
   let messagesElements = props.dialogsPage.messagesData.map(message => <Message message={message.message}/>);
@@ -11,11 +10,11 @@ const Dialogs = (props) => {
   let newMessageBody = props.dialogsPage.newMessageBody;
 
   let onSendMessageClick = () => {
-    props.dispatch(sendMessageCreator());
+    props.sendMessageClick();
   }
   let onNewMessageChange = (event) => {
-	 let body = event.target.value;
-	 props.dispatch(updateNewMessageBodyCreator(body));
+	let body = event.target.value;
+	props.newMessageChange(body);
   }
    return (
    	 <div className={classes.dialogs}>
