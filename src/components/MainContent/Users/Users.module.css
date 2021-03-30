@@ -1,0 +1,21 @@
+.usersWrapper{
+    padding:15px; 
+    flex-wrap:wrap;
+}
+.photo{
+    width:50px;
+    height:50px;
+    border-radius:50%; 
+    object-fit:cover; 
+    margin-bottom:5px; 
+}
+.usersItem{
+    display:flex;
+    margin-bottom:30px;
+}
+.usersLeft{
+    min-width:100px; 
+}
+.usersRight>div{
+    margin-bottom:5px
+}

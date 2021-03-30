@@ -11,29 +11,25 @@ const Users = (props) => {
 		]);
 	} 
 	
-	return <div>
+	return <div className={classes.usersWrapper}>
 		{
-			props.users.map(u => <div key={u.id}>
-				<span>
+			props.users.map(u => <div key={u.id} className={classes.usersItem}>
+				<div className={classes.usersLeft}>
 					<div>
-						<img src={u.photoUrl}/>
+						<img src={u.photoUrl} className={classes.photo}/>
 					</div>
 					<div>
 						{u.followed ? 
 						 <button onClick={() => {props.unfollow(u.id)}}>Unfollow</button> :
 						 <button onClick={() => {props.follow(u.id)}}>Follow</button>}
 					</div>		
-				</span>
-				<span>
-					<span>
-						<div>{u.fullName}</div>
-						<div>{u.status}</div>
-					</span>
-					<span>
-					    <div>{u.location.country}</div>
-						<div>{u.location.city}</div>
-					</span>
-				</span>
+				</div>
+				<div className={classes.usersRight}>
+					<div>{u.fullName}</div>
+					<div>{u.status}</div>
+					<div>{u.location.country}</div>
+					<div>{u.location.city}</div>
+				</div>
 			</div>)
 		}
 	</div>;
