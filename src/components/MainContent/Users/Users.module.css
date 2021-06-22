@@ -12,10 +12,26 @@
 .usersItem{
     display:flex;
     margin-bottom:30px;
+    background-color:bisque;
+    border:1px solid #808080;
+    padding:14px;
 }
 .usersLeft{
     min-width:100px; 
 }
 .usersRight>div{
     margin-bottom:5px
+}
+
+.followButton{
+    background-color:aqua;
+    color:black;
+    border:1px solid black;
+    cursor:pointer;  
+}
+
+.usersRight .userName{
+    font-weight:bold;
+    margin-bottom:15px;
+    font-size:20px;  
 }

@@ -4,10 +4,7 @@ import classes from "./ProfileInfo.module.css";
 const ProfileInfo = () =>{
 	return (
 	  <div>
-		<div>
-		   <img src="httpsimages.pexels.comphotos248797pexels-photo-248797.jpegauto=compress&cs=tinysrgb&dpr=1&w=500 alt=main-img"/>
-		</div>
-		<div>
+		<div className={classes.avaAndDescr}>
 		    ava + description
 		</div>
 	  </div> 
